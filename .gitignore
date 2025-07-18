@@ -1,0 +1,8 @@
+# Front-end
+/Front/node_modules/
+
+
+# Back-end
+/Back/.env
+/Back/node_modules/
+/Back/controllers/emailController.js

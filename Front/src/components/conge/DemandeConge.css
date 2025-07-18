@@ -1,0 +1,196 @@
+:root {
+  --primary-color: #2b2d42;
+  --secondary-color: #ff3c38;
+  --accent-color: #999998;
+  --gray-dark: #333;
+  --gray-light: #e5e5e5;
+  --success-color: #28a745;
+  --error-color: #dc3545;
+}
+
+/* Structure principale */
+.main-content {
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+.page-title,
+.register-title {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  border-bottom: 3px solid var(--secondary-color);
+  padding-bottom: 0.5rem;
+}
+
+/* Formulaire principal */
+.form-container,
+.register-container {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  max-width: 800px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Titre dans le formulaire */
+.form-title {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #222;
+  text-align: center;
+}
+
+/* Grille du formulaire */
+.user-form,
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+/* Groupes de champs */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label,
+label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.form-group input,
+input[type="text"],
+input[type="date"],
+select {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+  background: white;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(56, 53, 49, 0.15);
+  outline: none;
+}
+
+/* Boutons */
+.button-group,
+.form-submit {
+  grid-column: span 2;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.submit-button,
+.btn-accept,
+.prev-button,
+.next-button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+  color: white;
+}
+
+.submit-button,
+.btn-accept {
+  background-color: var(--primary-color);
+}
+
+.submit-button:hover,
+.btn-accept:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+.prev-button {
+  background: var(--error-color);
+}
+
+.next-button {
+  background: var(--gray-dark);
+}
+
+.prev-button:hover,
+.next-button:hover {
+  opacity: 0.9;
+}
+
+/* Liste des demandes */
+.demandes-list {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.demande-item {
+  background-color: #fff;
+  border: 1px solid var(--gray-light);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+/* Statuts */
+.statut-en\ attente,
+.statut-accepté,
+.statut-refusé {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-weight: bold;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.statut-en\ attente {
+  background-color: var(--accent-color);
+}
+
+.statut-accepté {
+  background-color: var(--success-color);
+}
+
+.statut-refusé {
+  background-color: var(--error-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .form-container,
+  .register-container {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .button-group,
+  .form-submit {
+    flex-direction: column;
+  }
+
+  .submit-button,
+  .prev-button,
+  .next-button,
+  .btn-accept {
+    width: 100%;
+  }
+}
